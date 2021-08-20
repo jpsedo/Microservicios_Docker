@@ -22,7 +22,7 @@ public class BusinessLayer {
     }
 
     public static void salvar(String resultado, String file){
-        try (Socket socket = new Socket("localhost", 8081)) {
+        try (Socket socket = new Socket("localhost", 8080)) {
             OutputStream outputStream = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(outputStream, true);
             writer.println(resultado +","+file);
